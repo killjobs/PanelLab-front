@@ -1,0 +1,24 @@
+<p>buscar works!</p>
+<h1>Ingrese número de documento, nombre o orden de trabajo</h1>
+<div>
+    <div>
+        No. de Documento
+    </div>
+    <div>
+        Nombre
+    </div>
+    <div>
+        Telefono
+    </div>
+    <div>
+        Ordenes de trabajo
+    </div>
+    <div *ngFor="let cliente of listaClientes">
+        <div>{{cliente.NumeroDocumento}}</div>
+        <div>{{cliente.Nombre}}</div>
+        <div>{{cliente.Telefono}}</div>
+        <div>
+            <label *ngFor="let ordenes of cliente.OrdenTrabajo">{{ordenes.NumeroOrden}}</label>
+        </div>
+    </div>
+</div>

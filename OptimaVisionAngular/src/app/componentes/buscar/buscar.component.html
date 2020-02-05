@@ -18,7 +18,9 @@
         <div>{{cliente.Nombre}}</div>
         <div>{{cliente.Telefono}}</div>
         <div>
-            <label *ngFor="let ordenes of cliente.OrdenTrabajo">{{ordenes.NumeroOrden}}</label>
+           <label *ngFor="let ordenes of cliente.Factura">
+               <a [routerLink]="['detallefactura',ordenes.NumeroOrden]">{{ordenes.NumeroOrden}}</a>
+            </label>
         </div>
     </div>
 </div>

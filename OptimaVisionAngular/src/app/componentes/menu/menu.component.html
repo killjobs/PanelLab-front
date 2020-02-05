@@ -1,6 +1,6 @@
 <p>{{titulo}}</p>
 <ul *ngFor="let elementoMenu of listadoMenus">
-    <li id="{{elementoMenu.index}}">
-        {{elementoMenu.descripcion}}
+    <li id="{{elementoMenu.index}}" routerLinkActive="active">
+        <a [routerLink]="[elementoMenu.rutaName]">{{elementoMenu.descripcion}}</a>
     </li>
 </ul>

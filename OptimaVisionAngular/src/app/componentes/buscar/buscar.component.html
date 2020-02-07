@@ -1,26 +1,66 @@
 <p>buscar works!</p>
 <h1>Ingrese número de documento, nombre o orden de trabajo</h1>
-<div>
-    <div>
-        No. de Documento
-    </div>
-    <div>
-        Nombre
-    </div>
-    <div>
-        Telefono
-    </div>
-    <div>
-        Ordenes de trabajo
-    </div>
-    <div *ngFor="let cliente of listaClientes">
-        <div>{{cliente.NumeroDocumento}}</div>
-        <div>{{cliente.Nombre}}</div>
-        <div>{{cliente.Telefono}}</div>
-        <div>
-           <label *ngFor="let ordenes of cliente.Factura">
-               <a [routerLink]="['detallefactura',ordenes.NumeroOrden]">{{ordenes.NumeroOrden}}</a>
-            </label>
-        </div>
-    </div>
-</div>
+<table class="table table-striped table-bordered table-hover">
+    <thead class="thead-light">
+        <tr>
+            <th>No. de Documento</th>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Ordenes de trabajo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cliente of listaClientes">
+            <td class="table-info">{{cliente.NumeroDocumento}}</td>
+            <td class="table-danger">{{cliente.Nombre}}</td>
+            <td class="table-success">{{cliente.Telefono}}</td>
+            <td class="table-warning">
+                <label *ngFor="let ordenes of cliente.Factura">
+                    <a [routerLink]="['/detallefactura',ordenes.NumeroOrden]">{{ordenes.NumeroOrden}}</a>
+                 </label>
+            </td>
+            <td class="table-info">{{cliente.NumeroDocumento}}</td>
+            <td class="table-danger">{{cliente.Nombre}}</td>
+            <td class="table-success">{{cliente.Telefono}}</td>
+            <td class="table-warning">
+                <label *ngFor="let ordenes of cliente.Factura">
+                    <a [routerLink]="['/detallefactura',ordenes.NumeroOrden]">{{ordenes.NumeroOrden}}</a>
+                 </label>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table class="table table-responsive table-sm table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>No. de Documento</th>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Ordenes de trabajo</th>
+            <th>No. de Documento</th>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Ordenes de trabajo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cliente of listaClientes">
+            <td>{{cliente.NumeroDocumento}}</td>
+            <td>{{cliente.Nombre}}</td>
+            <td>{{cliente.Telefono}}</td>
+            <td>
+                <label *ngFor="let ordenes of cliente.Factura">
+                    <a [routerLink]="['/detallefactura',ordenes.NumeroOrden]">{{ordenes.NumeroOrden}}</a>
+                 </label>
+            </td>
+            <td>{{cliente.NumeroDocumento}}</td>
+            <td>{{cliente.Nombre}}</td>
+            <td>{{cliente.Telefono}}</td>
+            <td>
+                <label *ngFor="let ordenes of cliente.Factura">
+                    <a [routerLink]="['/detallefactura',ordenes.NumeroOrden]">{{ordenes.NumeroOrden}}</a>
+                 </label>
+            </td>
+        </tr>
+    </tbody>
+</table>

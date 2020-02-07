@@ -1,34 +1,68 @@
-<div>
-    <div>
-        <h2>PRESENTACIÓN SEGÚN FACTURA</h2>
-    </div>
-    <div>
-        <label for="NumeroOrden">No. de Trabajo:</label>
-        <input type="text" name="NumeroOrden"/>
-        <label for="FechaVenta">Fecha:</label>
-        <input type="text" name="FechaVenta"/>
-    </div>
-    <div>
-        <label for="nombreCliente">Nombre: </label>
-        <input type="text" name="nombreCliente">
-    </div>
-    <div>
-        <div></div><div><label>ESFERA / CILINDRO / EJE / ADD</label></div>
-        <div><label for="formulaOD">OD</label></div><div><input type="text" name="formulaOD"></div>
-        <div><label for="formulaOI">OI</label></div><div><input type="text" name="formulaOI"></div>
-    </div>
-    <div>
-        <textarea name="DescripcionLentes" id="DescripLentes" cols="30" rows="10" placeholder="Lentes:"></textarea>
-        <textarea name="DescripcionMonturas" id="DescripMonturas" cols="30" rows="10" placeholder="Monturas:"></textarea>
-        <textarea name="DescripcionObservacion" id="DescripObservacion" cols="30" rows="10" placeholder="Observación:"></textarea>
-    </div>
-    <div>
-        <label for="ValorTotal">Total $</label><input type="text" name = "ValorTotal">
-        <label for="ValorAbono">Abono $</label><input type="text" name = "ValorAbono">
-        <label for="SaldoTotal">Saldo $</label><input type="text" name = "SaldoTotal">
-    </div>
-    <div>
-        <button name="btnFactura">Ingresar Factura</button>
-        <button name="btnRegresar">Regresar</button>
-    </div>
-</div>
+<section>
+    <section class="row align-items-center">
+        <section class="col-6">
+            <h2>PRESENTACIÓN SEGÚN FACTURA</h2>
+        </section>
+        <section class="col-6">
+            <section class="col">
+                <section class="form-group"><label for="NumeroOrden">No. de Trabajo:</label></section>
+                <section class="form-group"><input type="text" name="NumeroOrden"/></section>
+            </section>
+            <section class="col">
+                <section><label for="FechaVenta">Fecha:</label></section>
+                <section><input type="text" name="FechaVenta"/></section>
+            </section>
+        </section>    
+    </section>
+    <section class="row">
+        <section class="col-12">
+            <label for="nombreCliente">Nombre: </label>
+            <input type="text" name="nombreCliente">
+        </section>
+        <section class="col-12">
+            <label for="telefonoCliente">Telefono: </label>
+            <input type="text" name="telefonoCliente">
+            <label for="documentoCliente">C.C.:</label>
+            <input type="text" name="documentoCliente">
+        </section>
+    </section>
+    <section class="row">
+        <section class="col-6">
+            <section>&nbsp;</section>
+            <section><label for="formulaOD">OD</label></section>
+            <section><label for="formulaOI">OI</label></section>
+        </section>
+        <section class="col-6">
+            <section><label>ESFERA / CILINDRO / EJE / ADD</label></section>
+            <section><input type="text" name="formulaOD"></section>
+            <section><input type="text" name="formulaOI"></section>
+        </section>
+    </section>
+    <section class="row justify-content-center">
+        <section class="col-8">
+            <textarea name="DescripcionLentes" id="DescripLentes" cols="30" rows="2" placeholder="Lentes:"></textarea>
+            <textarea name="DescripcionMonturas" id="DescripMonturas" cols="30" rows="2" placeholder="Monturas:"></textarea>
+            <textarea name="DescripcionObservacion" id="DescripObservacion" cols="30" rows="2" placeholder="Observación:"></textarea>
+        </section>
+    </section>
+    <section class="row justify-content-center">
+        <section class="col-3">
+            <section><label for="ValorTotal">Total $</label></section>
+            <section><label for="ValorAbono">Abono $</label></section>
+            <section><label for="SaldoTotal">Saldo $</label></section>
+        </section>
+        <section class="col-3">
+            <input type="text" name = "ValorTotal">
+            <input type="text" name = "ValorAbono">
+            <input type="text" name = "SaldoTotal">
+        </section>
+    </section>
+    <section class="row justify-content-center">
+        <section class="col-3">
+            <button name="btnFactura">Ingresar Factura</button>
+        </section>
+        <section class="col-3">
+            <button name="btnRegresar">Regresar</button>
+        </section>
+    </section>
+</section>
